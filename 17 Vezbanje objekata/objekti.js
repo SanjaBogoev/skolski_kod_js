@@ -244,3 +244,5 @@ let brojSrVr = niz => {
 }
 
 console.log(brojSrVr([5, 6, 7, 8]));
+
+console.log("Test poruka!");
