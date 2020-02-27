@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title> Horizontalni meni </title>
+        <style>
+            body {
+                margin: 0px;
+                font-size: 150%;
+            }
+            a {
+                text-decoration: none;
+            }
+            ul {
+                list-style-type:none;
+                padding: 10px 10px 10px 0px;
+                background-color: brown;
+                overflow: hidden; /*da bi se videla pozadinska boja*/
+                position: fixed; /*da se meni spusti dole i nema belo ispod*/
+                bottom: 0;
+                width: 100%;
+            }
+            li {
+                float:left;
+                padding: 10px;
+                width: 15%;
+                            
+            }
+            #desno {
+                float: right;
+            }
+            li:hover {
+                background-color: coral;
+            }
+        </style>
+
+    </head>
+    <body>
+        <ul>
+            <li><a href="#">Prvi</a></li>
+            <li><a href="#">Drugi</a></li>
+            <li><a href="#">Treci</a></li>
+            <li id="desno"><a href="#" >Cetvrti</a></li>
+            
+        </ul>
+
+    </body>
+</html>

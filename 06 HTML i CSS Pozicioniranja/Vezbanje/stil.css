@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-image: url('../images/lego_pizza.jpg');
+    background-position: center;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    top: 25px;
+}
+.center {
+    font-size: 25pt;
+    font-weight: bold;        
+    color: white;  
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    position: absolute;
+    top: 35%;
+    text-align: center;
+    width: 100%;
+}
+.topbar ul {
+    list-style-type: none;
+    background-color: #303030;  
+    width: 100%;   
+    position: fixed;    
+    top: 0;        
+}
+.topbar li {
+    float: left;
+    width: 25%;
+    text-align: center;
+   /* padding: 10px;
+    border-right: white 1px solid;
+    border-top: white 1px solid;    */
+}
+.topbar ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.topbar li a {
+    text-decoration: none;
+    color: white;  
+    padding: 10px;
+    
+}
+nav li a{
+    display: block;
+    border-right: 2px solid #bababa;
+}
+.topbar li:hover {
+    background-color: red; 
+    font-weight: bold;     
+}
+.footerMeni ul {
+    position: fixed;
+    bottom: 0;
+    list-style-type: none;
+    background-color: #303030; 
+    width: 100%;              
+}
+.footerMeni li {
+    float: left;
+    width: 25%;
+    text-align: center;   
+    /*padding: 10px;
+    border-right: white 1px solid;   */
+    
+}
+.footerMeni ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.footerMeni li a {
+    text-decoration: none;
+    color: white; 
+    padding: 10px; 
+        
+}
+nav li a{
+    display: block;
+    border-right: 2px solid #bababa;
+}
+.footerMeni li:hover {
+    background-color: red;  
+    font-weight: bold;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	width: 25%;
+}
+
+.dropdown-content a {
+	color: red;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}

@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#slika1 {
+    position: relative; /*pomera se relativno u odnosu na svoju normalnu poziciju*/
+    left: 100px;
+    bottom: -50px; /*left, right, top i bottom ne funkcionisu dok se ne stavi position!!!*/
+}
+
+#div {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    position: relative;
+    left: 200px;
+    z-index: 1;
+    
+}
+
+#slika2 {
+    position: absolute; /*pomera se apsolutno u odnosu na najblizeg pretka (parent element) koji ima podesenu poziciju*/
+    left: 40px;
+    top: 50%;
+} /*
+header {
+    background-image: url('../Images/lego_pizza.jpg');
+    background-position: center;
+    position: relative;
+    height: 100px;
+}
+div {
+    font-size: 25pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold ;
+    color: white;    
+    position: absolute;
+    left: 30%;
+    top: 30%;    
+} */
+
+header {
+    background-image: url('../images/lego_pizza.jpg');
+    background-position: 0 -160px;
+    height: 150px;
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin-top: 45px;
+    
+}
+    header p {
+        color: white;
+        font-size: 20px;
+        font-weight: bold;  
+        margin: 0;   
+        position: absolute;          
+}
+#part1 {    
+    bottom: 0;
+    right: 0;
+}
+#part2{
+    bottom: 0;
+    left: 0;
+}
+#part3 {
+    top: 0;
+    right: 0;
+}
+#part4 {
+    top: 0;
+    left: 0; /*svakako se tu nalazi, tako da ne mora da se kuca*/
+}
+#part5 {
+    top: 45%;
+    text-align: center; /*kada se centrira text, najbolje je koristiti text-align*/
+    width: 100%; /*mora da se stavi sirina 100%, da bi text zauzeo celu duzinu stranice i tacno ga centrirao*/
+
+}
+.topbar {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    
+}
+.topbar ul {    
+    list-style-type: none;    
+    background-color: #303030;    
+    overflow: hidden; /*visak sadrzaja se odseca i ne prikazuje se*/
+}
+.topbar li {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+.topbar ul::after {
+    content: ""; /*Kada redjamo elemente float, njihovom parent elementu moramo da pisemo pseudo element ::after*/
+    display: table;
+    clear: both;
+}
+.topbar li a {
+    text-decoration: none;
+    color: white;
+    padding: 14px 16px;
+}
+nav li a{
+    display: block;
+    border-right: 2px solid #bababa;
+}
+nav li a:hover {
+    background-color: red;
+    font-weight: bold;
+}
+.podmeni {
+    position: absolute;
+    z-index: 2;
+    width: 25%;
+    background-color: #303030;
+    display: none;
+}
+.dropdown:hover .podmeni {
+    display: block;
+
+}
+.footerMeni ul {
+    position: fixed;
+    bottom: 0;
+    list-style-type: none;
+    background-color: #303030; 
+    width: 100%; 
+    z-index: 2;             
+}
+.footerMeni li {
+    float: left;
+    width: 25%;
+    text-align: center;   
+}
+.footerMeni ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.footerMeni li a {
+    text-decoration: none;
+    color: white; 
+    padding: 10px; 
+        
+}
+nav li a{
+    display: block;
+    border-right: 2px solid #bababa;
+}
+.footerMeni li:hover {
+    background-color: red;  
+    font-weight: bold;
+}
+
+#slika3 {
+    /*display: none;*/ /*element se ne prikazuje i NE ZAUZIMA prostor*/
+    visibility: hidden; /*element se ne prikazuje, ali ZAUZIMA prostor*/
+}
+
+aside {
+    float: left;
+    clear: left;
+    width: 20%;
+}
+section {
+    float: right;
+    clear: right;
+    width: 75%;
+}
+.column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+}
+
+section::after, .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+section div h3, section div p {
+    text-align: center;
+}
+section img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+aside ul {
+    list-style-type: none;
+    background-color: whitesmoke; 
+
+}
+aside li {
+    list-style-type: none;
+}
+aside a {
+    text-decoration: none;
+}
+.podmeni2 {
+    position: absolute;
+    z-index: 2;
+    width: 25%;
+    background-color: #303030;
+    display: none;
+}
+.dropdown:hover .podmeni2 {
+    display: block;
+}
+.podmeni2 {
+	bottom: 40px;
+	right: 0;
+	width: 25%;

@@ -1,0 +1,251 @@
+<html>
+    <head>
+        <title>Responsive</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            header, footer {
+                background-color: aqua;
+                text-align: center;
+                padding: 10px 0;
+            }
+            footer {
+                position: fixed;
+                bottom: 0;
+            }
+            aside { 
+                padding-left: 10px;
+                padding-top: 10px;
+                
+            }
+            [class*="col-"] {
+                float: left;
+                width: 100%;
+            }            
+            .row {
+                width: 100%;
+               
+            }
+            .row::before, .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            nav>ul {                
+                padding: 0px;
+                list-style-type: none;
+                background-color: darkturquoise;
+            }     
+            nav>ul>li {
+                padding: 10px;
+                text-align: center;
+            }
+            nav>ul>li:hover {
+                background-color: deepskyblue;
+                font-weight: bold;  
+               transform: scale(0.95); /* - smanji se */              
+            }
+            img {
+                width: 100%;
+            }      
+            
+            img:hover {
+                opacity: 0.5;
+            }
+            .povoljnosti ul {
+                list-style-type: none;
+            }
+            .kartica1 ul {
+                color: green;
+            }
+            .kartica2 ul {
+                color: blue;
+            }
+            .kartica3 ul {
+                color: gold;
+            }
+            form {
+                padding-bottom: 40px; /*Najdonjem el. na stranici povecamo donji padding da bi se video od futera*/
+            }
+            form>div {
+                padding: 10px;
+            }
+            input:active {
+                background-color: green;
+            }
+            input:hover {
+                background-color: greenyellow;
+            }
+            input:focus, textarea {
+                background-color:gold;
+            }
+            .desno {
+                margin-left: 33.33%;
+            }
+            
+          
+
+            /*Za desktop - min sirina je 700px*/
+            @media only screen and (min-width: 700px) {
+                nav>ul {
+                    overflow: hidden;
+                }
+                nav>ul>li {
+                    float: left;
+                    width: 33.33%;
+                    
+                }
+                .col-1 {
+                    width: 8.33%;
+                }
+                .col-2 {
+                    width: 16,66%;
+                }
+                .col-3 {
+                    width: 25%;
+                }
+                .col-4 {
+                    width: 33.33%;
+                }
+                .col-5 {
+                    width: 41.66%;
+                }
+                .col-6 {
+                    width: 50%;
+                }
+                .col-7 {
+                    width: 58.33%;
+                }
+                .col-8 {
+                    width: 66.66%;
+                }
+                .col-9 {
+                    width: 75%;
+                }
+                .col-10 {
+                    width: 83.33%;
+                }
+                .col-11 {
+                    width: 91.66%;
+                }
+                .col-12 {
+                    width: 100%;
+                }
+            }
+
+            /*Za mobile -max sirina je 700px*/
+            @media only screen and (max-width: 700px) {
+                [class*="col-"] {
+                    width: 100%;
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+        <header class="col-12">
+            <h3> Ovo je heder </h3>
+        </header>
+
+        <div class="row">
+            <nav class="col-3">
+                <ul>
+                    <li> Jedan </li>
+                    <li> Dva </li>
+                    <li> Tri </li>
+                </ul>
+            </nav>
+
+            <aside class="col-9">
+                <p> Neki tekst </p>
+                
+            </aside>
+        </div>
+
+        <div class="row">
+            <!-- Prva slika -->
+            <div class="col-4">
+                <img src="images/lights.jpg">
+                <p> Slika 1 </p>
+            </div>
+
+            <!-- Druga slika -->
+            <div class="col-4">
+                <img src="images/mountains.jpg">
+                <p> Slika 2</p>
+            </div>
+
+            <!-- Treca slika -->
+            <div class="col-4">
+                <img src="images/nature.jpg">
+                <p> Slika 3 </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-3 povoljnosti kartica1">
+                <h4> Card 1 </h4>
+                <ul>
+                    <li> Povoljnost 1 </li>
+                    <li> Povoljnost 2 </li>
+                    <li> Povoljnost 3 </li>
+                </ul>                
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-4 povoljnosti kartica2">
+                <h4> Card 2 </h4>
+                <ul>
+                    <li> Povoljnost 1 </li>
+                    <li> Povoljnost 2 </li>
+                    <li> Povoljnost 3 </li>
+                </ul>    
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-5 povoljnosti kartica3">
+                <h4> Card 3 </h4>
+                <ul>
+                    <li> Povoljnost 1 </li>
+                    <li> Povoljnost 2 </li>
+                    <li> Povoljnost 3 </li>
+                </ul>    
+            </div>
+        </div>
+
+        <form>
+            <div class="row">
+                <label class="col-4"> Ime </label>
+                <input type="text" class="col-8">
+            </div>
+            <div class="row">
+                <label class="col-4"> Unesite komentar </label>
+                <textarea class="col-6"></textarea>
+            </div>
+            <div class="row">
+                <label class="col-4"> Izaberite grad </label>
+                <select name="grad">
+                    <option> Beograd </option>
+                    <option> Novi Sad </option>
+                    <option> Nis </option>
+                    <option> Subotica </option>
+                </select>                
+            </div>
+
+            <div class="row">
+                <input type="button" value="Posalji" class="col-4 desno">
+
+            </div>
+        </form>
+
+        <footer class="col-12">
+            <h4> Ovo je futer</h4>
+        </footer>
+
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Responsive</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            div {
+                background-color: coral;
+            }
+            /*Ako je prozor pregledaca 650px ili veci 
+            @media only screen and (min-width: ;)*/
+            /*Ako je prozor pregledaca 650px ili manji*/
+            
+            /*od 0 do 650px*/
+            @media only screen and (max-width: 650px)
+            {
+                div {
+                    background-color: blue;
+                }
+
+            }
+            /*od 650 do 750px*/
+            @media only screen and (min-width: 650px)
+            {
+                div {
+                    background-color:red;
+                }
+
+            }
+            /*od 750px na dalje*/
+            @media only screen and (min-width: 750px)
+            {
+                div {
+                    background-color: green;
+                }
+
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            Neki tekst
+        </div>
+
+    </body>
+</html>

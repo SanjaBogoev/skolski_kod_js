@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>Elementi forme</title>
+
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Informacije</legend>
+                <!-- Unos imena-->
+                <label>Ime:</label>
+                <input type="text">
+                <br>
+                <!-- Skriveno polje-->
+                <input type="hidden">
+                <!-- Unos prezimena-->
+                <label>Prezime:</label>
+                <input type="text">
+                <br>
+                <!-- Unos mail-a-->
+                <label>E-mail:</label>
+                <input type="email">
+                <br>
+                <!-- Unos lozinke (osetljivih podataka)-->
+                <label>Lozinka:</label>
+                <input type="password">
+                <br>
+                <!-- Unos numerickog sadrzaja-->
+                <label>Koliko imate godina:</label>
+                <input type="number" min="18" max="150" step="1"> <!-- Dodatni atributi za ogranicenja min, max i step-->
+                <br>
+                <!-- Kalendar-->
+                <label>Kog datuma ste rodjeni:</label>
+                <input type="date" min="1900-01-01" max="2020-01-27" step="3"> <!--Ogranicenja min, max i step (godina-mesec-dan)-->
+                <br>
+                <!-- Unos vremena-->
+                <label>Unesite vreme:</label>
+                <input type="time">
+                <br>
+                <!-- Odaberite jedan pol-->
+                <label>Odaberite pol:</label>
+                <input type="radio" name="pol" value="m"> Muski <!-- value vrednost dugmeta (npr. ako je cekirano m, prikazi sliku muskarca)-->
+                <input type="radio" name="pol" value="z"> Zenski
+                <input type="radio" name="pol" value="n"checked> Neopredeljen
+                <br>
+                <!-- Odaberite jedan kurs-->
+                <label>Odaberite kurs:</label>
+                <input type="radio" name="kurs" value="js"> JS
+                <input type="radio" name="kurs" value="qa"> QA
+                <br>
+                <!-- Checkbox - Odaberite programski jezik (moguce je izabrati vise)-->
+                <label>Odaberite programski jezik:</label>
+                <input type="checkbox" name="jezik" value="html"> HTML
+                <input type="checkbox" name="jezik" value="css"> CSS
+                <input type="checkbox" name="jezik" value="js"> JS
+                <br>
+                <label>Odaberite jezik:</label>
+                <input type="checkbox" name="maternji" value="srp" checked> Srpski
+                <input type="checkbox" name="maternji" value="eng"> Engleski
+                <input type="checkbox" name="maternji" value="nem"> Nemacki
+                <input type="checkbox" name="maternji" value="rus"> Ruski
+                <br>
+                <!-- Odabir fajla-->
+                <label>Prilozite svoju biografiju:</label>
+                <input type="file">
+                <br>
+                <!-- Select - padajuci meni/lista-->
+                <select name="prog_jezik">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JS</option>
+                </select>
+                <br>
+                <!-- Select + optgroup-->
+                <select >
+                    <optgroup label="Nis">
+                        <option value="php" name="nis">PHP</option>
+                        <option value="js" name="nis">JS</option>
+                        <option value="qa" name="nis">QA</option>
+                    </optgroup>
+                    <optgroup label="Beograd">
+                        <option value="js" name="bg">JS</option>
+                        <option value="qa" name="bg">QA</option>
+                    </optgroup>
+                </select >
+            
+
+            </fieldset>
+
+            <fieldset>
+                <legend>O meni</legend>
+                <label>Pretraga</label>
+                <input type="search">
+                <br>
+                <!-- odabir boje-->
+                <label>Odaberite omiljenu boju:</label>
+                <input type="color" value="#ff0000">
+                
+
+            </fieldset>
+            <!-- Button - dugme-->
+            <input type="button" value="Klikni" onclick="alert('Pozdrav! :) ')">
+            <br>
+            <!-- Submit dugme-->
+            <input type="submit" value="Potvrdi">
+            <br>
+            <!-- Reset dugme-->
+            <input type="reset" value="Resetuj">
+        </form>
+
+    </body>
+</html>

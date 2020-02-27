@@ -1,0 +1,77 @@
+p {
+    color: purple;
+}
+h1 {
+    color: #900020;
+}
+
+.zeleno {
+    color: green;
+    font-size: 20px;
+    text-align: right;
+}
+.centar {
+    text-align: center;
+}
+img {
+   /* border-width: 2px;
+    border-style: dashed;
+    border-color: black;*/
+
+    border: 2px dashed black;   
+
+}
+
+#pera {
+    border: 3px dotted #8F30C9;
+    font-weight: bold;
+    font-size: 20px;
+    /*margin-top: 30px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    */
+    margin: 30px 0px 10px 50px; /*OBJEDINJENO-redosled margina: gornja, desna, donja, leva (u smeru kazaljke na satu)*/
+    /*tri vrednosti = prva gornja, druga leva i desna, treca donja*/
+    /*dve vrednosti = prva gornja i donja, druga leva i desna*/
+
+    padding: 10px 30px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("fruit.webp");
+    background-repeat: no-repeat; /* vrednosti: repeat-x, repeat-y, repeat, no-repeat*/
+    background-position: right;
+   /* background-position: 10px 15px;*/ /*rucno podesavanje pozicije slike*/
+    
+}
+.familija {
+    font-family: Arial, Helvetica, sans-serif;
+}
+#naslov {
+    text-align: center;
+    color: green;
+    font-family: "Comic Sans Ms";
+}
+
+a {
+    color: red;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: yellow;      
+}
+a:active {
+    font-weight: bold;
+    font-size: 24px;
+}
+/*  PSEUDO SELEKTORI
+    a:link - neposecen
+    a:visited - posecen
+    a:hover - kada je kursor na linku
+    a:active - sta se desi linku kada se klikne na njega*/
+
+a:visited {
+    color: seagreen;
+}   

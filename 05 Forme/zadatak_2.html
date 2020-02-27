@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title> Zadatak 2 - Forme</title>
+        <style>
+            input {
+                margin-bottom: 10px;                                
+                padding: 5px;                       
+                        
+            }
+            label {
+                padding-right: 100px;
+                
+            }
+            .dugme {
+                margin-left: 100px;
+            }
+                 
+           form {
+               background-color: lightpink;
+           }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend> Form Validation</legend>
+                <!--Ime-->
+                <label>Name:</label>
+                <input type="text">
+                <br>        
+                <!-- Username-->
+                <label>Username:</label>
+                <input type="text">
+                <br>                
+                <!-- Password-->
+                <label>Password:</label>
+                <input type="password">
+                <br>                
+                <!-- Ponovi password-->
+                <label>Re-type Password:</label>
+                <input type="password">
+                <br>                
+                <!--Gender-->
+                <label>Gender:</label>
+                <input type="radio" value="m"> Male
+                <input type="radio" value="f"> Female
+                <input type="radio" value="o"> Other
+                <br>                
+                <!-- Skills-->
+                <label>Programming sills:</label>
+                <input type="checkbox" value="java"> Java
+                <input type="checkbox" value="android"> Android
+                <input type="checkbox" value="ruby"> Ruby
+                <input type="checkbox" value="net"> .Net
+                <br>                
+                <!-- Telefon-->
+                <label> Contact no:</label>
+                <input type="number">
+                <br>                
+                <!-- Email-->
+                <label>Email:</label>
+                <input type="email">
+                <br>                
+                <!--Koledz-->
+                <label>College:</label>
+                <select name="college">
+                    <option value="osn">Osnovna skola</option>
+                    <option value="sr">Srednja skola</option>
+                    <option value="visa">Visa skola</option>
+                    <option value="fax">Fakultet</option>                                    
+
+                </select>
+                <br>                
+                <!--SUBMIT-->
+                <input class="dugme" type="submit">
+
+                               
+            </fieldset>
+        </form>
+
+    </body>
+</html>

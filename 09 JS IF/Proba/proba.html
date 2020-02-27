@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            header {
+                background-color: green;
+                height: 100px;
+            }
+            p {
+                color: red;
+                text-align: center;
+                position: relative;
+                top: 40%;
+            }
+        </style>
+    </head>
+<body>
+<header>   
+<script>
+    let vreme = new Date();
+let danUNedelji = vreme.getDay();
+let datum = vreme.getDate();
+let mesec = vreme.getMonth();
+let godina = vreme.getFullYear();
+
+switch (danUNedelji) {
+    case 1:
+        document.write(`<p class='vreme'>Danas je Ponedeljak ${datum}.${mesec}.${godina}.</p>`);
+    break;
+    case 2: 
+        document.write(`<p class='vreme'>Danas je Utorak ${datum}.${mesec}.${godina}.</p>`);   
+    break;
+    case 3: 
+        document.write(`<p class='vreme'>Danas je Sreda ${datum}.${mesec}.${godina}.</p>`);   
+    break;
+    case 4: 
+        document.write(`<p class='vreme'>Danas je Cetvrtak ${datum}.${mesec}.${godina}.</p>`);   
+    break;
+    case 5: 
+        document.write(`<p class='vreme'>Danas je Petak ${datum}.${mesec}.${godina}.</p>`);   
+    break;
+    case 6: 
+        document.write(`<p class='vreme'>Danas je Subota ${datum}.${mesec}.${godina}.</p>`);   
+    break;
+    case 0: 
+        document.write(`<p class='vreme'>Danas je Nedelja ${datum}.${mesec}.${godina}.</p>`);    
+    break;
+}
+</script>
+</header>
+<script>
+let vreme = new Date();
+let danUNedelji = vreme.getDay();
+let datum = vreme.getDate();
+let mesec = vreme.getMonth();
+let godina = vreme.getFullYear();
+document.write(datum, ".", mesec, ".", godina, ".");
+</script>
+
+</body>
+</html> 
