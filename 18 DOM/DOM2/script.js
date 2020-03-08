@@ -130,7 +130,7 @@ paragrafi.forEach((par, i) => {
         par.style.backgroundColor = 'pink'; 
     }
     else {
-        par.style.backgroundColor = 'yellow';
+        par.style.backgroundColor = 'lightblue';
         par.style.color = 'blue';
     }
 });
@@ -142,4 +142,69 @@ par.classList.remove('error'); //Brisanje klase elementu
 par.classList.toggle('error'); // Switch za klase - ukljucuje klasu ako ne postoji, iskljucuje ako postoji
 
 
+//Svim parnim paragrafima na stranici dodati klasu error, a svim neparnim paragrafima dodati klasu success
 
+//Tekst u paragrafima naizmenično pisati veličinom 15px, veličinom 20px i veličinom od 25px.
+paragrafi.forEach((elem, index) => {
+    if (index % 3 == 0) {
+        elem.style.fontSize = '15px';        
+    }
+    else if (index % 3 == 1) {
+        elem.style.fontSize = '20px';
+    }
+    else {
+        elem.style.fontSize = '25px';
+    }
+});
+
+/*Svim paragrafima čiji tekst sadrži reč error, postaviti klasu na error, svim paragrafima čiji tekst
+sadrži reč success, postaviti klasu na success. Ostale klase paragrafa ne modifikovati.*/
+
+//if(p.textContent.includes(’success’))
+
+paragrafi.forEach(elem => {
+    if (elem.textContent.includes('Success')) {
+        elem.classList.add('success');
+    }
+    else if (elem.textContent.includes('Error')) {
+        elem.classList.add('error');
+    }
+});
+
+/*Svim paragrafima koji imaju klasu error skloniti tu klasu, a svim paragrafima koji nemaju klasu error dodati tu klasu */
+
+//Dodati novi div tag dokumentu
+div = document.createElement('div');
+div.innerText = 'Pridodati div';
+document.body.appendChild(div);
+
+/*Formirati ul listu sa stavkama čiji je sadržaj proizvoljan tekst, i dodati je div elementu. */
+
+let lista1 = document.createElement('ul');
+let li1 = document.createElement('li');
+li1.innerText = 'Prvi item';
+
+let li2 = document.createElement('li');
+li2.innerText = 'Drugi item';
+
+let li3 = document.createElement('li');
+li3.innerText = 'Treci item';
+
+let divLista = document.getElementById('lista');
+divLista.appendChild(lista1);
+lista1.appendChild(li1);
+lista1.appendChild(li2);
+lista1.appendChild(li3);
+
+// Iz ul liste izbaciti prvu stavku.
+//prvi nacin
+//lista1.removeChild(lista1.firstChild);
+// drugi nacin
+//lista1.removeChild(lista1.childNodes[0]);
+//lista1.removeChild(lista1.lastChild);
+
+// U ul listi zameniti drugu stavku liste.
+let liPom = document.createElement('li');
+liPom.innerText = '***';
+
+lista1.replaceChild(liPom, lista1.childNodes[1]);
