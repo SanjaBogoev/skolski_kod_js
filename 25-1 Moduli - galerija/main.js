@@ -1,7 +1,8 @@
-import {generateList, generateListItem} from "./modules/list.js";
+/*
+import {generateList, generateItem as generateListItem} from "./modules/list.js";
 
-import {generateTable, generateTableRow, generateTableItem} from "./modules/table.js";
-
+import {generateTable, generateTableRow, generateItem as generateTableItem} from "./modules/table.js";
+//import generateTable from "./modules/table.js";
 let ul = generateList(document.body);
 generateListItem(ul, "images/photo1.jfif");
 generateListItem(ul, "images/photo2.jfif");
@@ -17,3 +18,21 @@ generateTableItem(tr1, "images/photo2.jfif");
 let tr2 = generateTableRow(table);
 generateTableItem(tr2, "images/photo2.jfif");
 generateTableItem(tr2, "images/photo3.jfif");
+*/
+
+import * as List from "./modules/list.js";
+import * as Table from "./modules/table.js";
+
+let ul = List.generateList(document.body);
+List.generateItem(ul, "images/photo1.jfif");
+List.generateItem(ul, "images/photo2.jfif");
+List.generateItem(ul, "images/photo3.jfif");
+
+let table = Table.generateTable(document.body);
+let tr1 = Table.generateTableRow(table);
+Table.generateItem(tr1, "images/photo1.jfif");
+Table.generateItem(tr1, "images/photo2.jfif");
+let tr2 = Table.generateTableRow(table);
+Table.generateItem(tr2, "images/photo2.jfif");
+Table.generateItem(tr2, "images/photo3.jfif");
+

@@ -21,7 +21,7 @@ let generateTableRow = parent => {
     return tr;
 };
 
-let generateTableItem = (parent, src) => {
+let generateItem = (parent, src) => {
     let td = document.createElement('td');
     let img = generateImage(src); 
     td.appendChild(img);   
@@ -29,4 +29,5 @@ let generateTableItem = (parent, src) => {
     return td;
 };
 
-export{generateTable, generateTableRow, generateTableItem};
+export{generateTable, generateTableRow, generateItem};
+//export default generateTable;

@@ -12,7 +12,7 @@ let generateList = parent => {
     return ul;
 };
 
-let generateListItem = (parent, src) => {
+let generateItem = (parent, src) => {
     let li = document.createElement('li');
     li.style.float = 'left';
     let img = generateImage(src);
@@ -20,4 +20,4 @@ let generateListItem = (parent, src) => {
     parent.appendChild(li);
 };
 
-export {generateList, generateListItem};
+export {generateList, generateItem};
