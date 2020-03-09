@@ -3,7 +3,9 @@
     -generateTableRow(parent), koja formira tr tag i dodaje ga na parent element,
     -generateTableItem(parent, src), koja formira td tag čiji je sadržaj slika na zadatoj putanji, i dodaje ga na parent element. */
 
-import {generateImage} from "./general.js";
+//import {generateImage} from "./general.js";
+import generateImage from "./general.js";
+
 
 let generateTable = parent => {
     let table = document.createElement('table');
@@ -14,6 +16,7 @@ let generateTable = parent => {
 
 let generateTableRow = parent => {
     let tr = document.createElement('tr');
+    tr.style.padding = '10px';
     parent.appendChild(tr);
     return tr;
 };
@@ -23,6 +26,7 @@ let generateTableItem = (parent, src) => {
     let img = generateImage(src); 
     td.appendChild(img);   
     parent.appendChild(td);
+    return td;
 };
 
 export{generateTable, generateTableRow, generateTableItem};

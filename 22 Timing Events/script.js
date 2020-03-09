@@ -18,13 +18,14 @@ btn2.addEventListener('click', () => {
     clearTimeout(timer);
 });
 
+//STOPERICA
 let div = document.querySelector('#result');
 let btn3 = document.querySelector('#btn3');
+let btn4 = document.querySelector('#btn4');
+
 let brojac = 0;
 let clock;
-let clockIsSet = false;
-
-let btn4 = document.querySelector('#btn4');
+let clockIsSet = false; //uvodi se da ne bi mogla vise puta da se aktivira f-ja i da brojac ne pocne da se povecava velikom brzinom
 
 btn3.addEventListener('click', () => {
     if (!clockIsSet) { //(clockIsSet == false / clockIsSet != true)

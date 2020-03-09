@@ -17,7 +17,7 @@ liZadaci.forEach(elem => {
 */
 ulZadaci.addEventListener('click', (e) => {
     //console.log("Kliknuto na UL");
-    //console.log(e.target.tagName); // e.targer vraca element sa tagovima <li>Nova obaveza </li>, a e.target.tagName daje samo ime taga
+    //console.log(e.target.tagName); // e.target vraca element sa tagovima <li>Nova obaveza </li>, a e.target.tagName daje samo ime taga
     if (e.target.tagName == 'LI') {
         e.target.remove();
     }

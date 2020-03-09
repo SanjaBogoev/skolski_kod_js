@@ -52,7 +52,7 @@ paragraf.innerHTML += ' Kako si? ';
 // VEZBANJE
 //Selektovati sve paragrafe i u svakom od njih pridodati tekst „VAŽNO!!!“
 sviParagrafi.forEach(elem => {
-    elem.innerHTML +=  'VAZNO <a href="http://www.google.com">ne radi!!!</a>';
+    elem.innerHTML +=  '<span>VAZNO</span>';
 });
 
 //Svim divovima na stranici dodati po jedan naslov najveće veličine sa proizvoljnim tekstom
@@ -88,10 +88,10 @@ imena.forEach(elem => {
     let sadrzaj = "";
     imena.forEach(ime => {
         let item = `<tr><td>${ime}</td></tr>`;
-        sadrzaj += item;
-        
+        sadrzaj += item;        
     });
     tabela.innerHTML += sadrzaj;
+    
 //SELEKTOVANJE SVE DECE JEDNOG RODITELJA
 // Dohvatamo svu decu body taga
 let potomci = document.body.children;

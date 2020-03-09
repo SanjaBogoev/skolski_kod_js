@@ -96,8 +96,7 @@ paragrafi.forEach((par, i) => {
 
 naslov.style.fontSize = ’ ’;
 
-Ukoliko želimo da poništimo neki atribut i postavimo ga na 0, onda za vrednost atributa postavimo prazan
-string*/ 
+Ukoliko želimo da poništimo neki atribut i postavimo ga na 0, onda za vrednost atributa postavimo prazan string*/ 
 
 
 // VEZBANJE

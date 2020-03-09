@@ -28,8 +28,8 @@ form.addEventListener('submit', (event) => {
         }
     });*/
 
-    //Za formu:
-    // 1) u JS kodu - objekat forme (promenljiva form)
+    //Za formu: (potrebni elementi)
+    // 1) u JS kodu - objekat forme (promenljiva form - moramo da 'dohvatimo' formu)
     // 2) Svi elementi forme u HTML-u moraju da imaju NAME atribut
 
     let odg1 = form.q1.value; //forma.nameAtributElementaIzForme.value - value cekiranog radio button-a

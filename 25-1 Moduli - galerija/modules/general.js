@@ -7,4 +7,5 @@ let generateImage = src => {
     return img;
 };
 
-export {generateImage};
+//export {generateImage};
+export default generateImage;

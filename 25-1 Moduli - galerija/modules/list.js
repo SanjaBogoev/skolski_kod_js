@@ -2,7 +2,8 @@
     //-generateList(parent), koja formira ul listu i dodaje je na parent element,
     //-generateListItem(parent, src), koja formira stavku liste čiji je sadržaj slika na zadatoj putanji, i dodaje je na parent element.
 
-import {generateImage} from "./general.js";
+//import {generateImage} from "./general.js";
+import generateImage from "./general.js";
 
 let generateList = parent => {
     let ul = document.createElement('ul');
