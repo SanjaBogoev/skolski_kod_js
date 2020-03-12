@@ -79,9 +79,14 @@ let film4 = new Film("Naked Gun", "David Zucker", 1500);
 //film4.fGodinaIzdanja = 1599;
 console.log(film4);
 
+let f1 = new Film("Naked Gun", "David Zucker", 1500, [10, 8, 7, 9]);
+let f2 = new Film("Avatar", "Dzejms Kamerun", 2009, [3, 8.5, 9, 10, 6]);
+let f3 = new Film("Ambis", "Dzejms Kamerun", 1989, [10, 7, 9, 10, 9]);
+
 let pacijent1 = new Pacijent("Pera", 184, 95);
 let pacijent2 = new Pacijent("Mika", 170, 125);
 let pacijent3 = new Pacijent("Zika", 176, 77);
+
 pacijent1.stampaj();
 pacijent2.stampaj();
 pacijent3.stampaj();
@@ -92,6 +97,98 @@ console.log(pacijent1.kritican());
 console.log(pacijent2.kritican());
 console.log(pacijent3.kritican());
 
-let pacijent4 = new PacijentGS("Pera", -50, 1000);
-console.log(pacijent4);
+//Pacijenti
+    // Kreirati niz od barem tri pacijenta.
+let p1 = new PacijentGS("Mila", 176, 65);
+console.log(p1);
+let p2 = new PacijentGS("Ana", 173, 70);
+console.log(p2);
+let p3 = new PacijentGS("Sale", 165, 55);
+console.log(p3);
 
+let pacijenti = [p1, p2, p3];
+
+    // Ispisati podatke o pacijentu sa najmanjom tezinom
+let minPac = pacijenti[0]; // cuva cao objekat, celog pacijenta
+let minTez = pacijenti[0].pTezina; // minPac.pTezina;
+pacijenti.forEach(elem => {
+    if (minTez > elem.pTezina) {
+        minPac = elem;
+        minTez = elem.pTezina;
+    }
+});
+minPac.stampaj(); //minPac je objekat, neki pacijent iz niza
+
+    // Ispisati podatke o pacijentu sa najvećim bmi vrednošću.
+let maksPac = pacijenti[0];
+//let maksBmi = pacijenti[0].bmi();
+pacijenti.forEach(elem => {
+    if(maksPac.bmi() < elem.bmi()) {
+        maksPac = elem;
+        //maksBmi = elem.bmi();
+    }
+});    
+console.log(`Pacijent sa najvecim BMI je: `);
+maksPac.stampaj();
+
+//Niz FILMOVA
+
+let filmovi = [f1, f2, f3];
+//Ispis ocena ovih filmova
+filmovi.forEach(elem => {
+    let ocene = elem.fOcene;
+    ocene.forEach(o => {
+        console.log(o);
+    });
+});
+console.log(`Prosecna ocena je:`);
+console.log(f1.prosecna());
+
+/* Napraviti funkciju vekFilmova kojoj se prosleđuje niz filmova i ceo broj
+(vek), a funkcija ispisuje samo one filmove koji su stvoreni u prosleđenom
+veku*/
+
+let filmVek = (niz, odGod, doGod) => {
+    niz.forEach(elem => {
+        if(elem.fGodinaIzdanja >= odGod && elem.fGodinaIzdanja <= doGod) {
+            elem.stampaj();
+        }
+    });
+}; 
+filmVek(filmovi, 1999, 2020);
+
+/*Napraviti funkciju prosecnaOcena kojoj se prosleđuje niz filmova, a koja
+određuje i vraća prosečnu ocenu svih filmova. */
+
+let prosecnaOcena = niz => {
+    let sumaOcena = 0;
+    let brojOcena = 0;
+    niz.forEach(film => {
+        let ocene = film.fOcene;
+        //brojOcena += ocene.length; (umesto brojOcena++;)
+        ocene.forEach(o => {
+            sumaOcena += o;
+            brojOcena++;
+        });
+    });
+    let arsr = sumaOcena / brojOcena;
+    return arsr;
+};
+console.log(`Prosecna ocena svih filmova je ${prosecnaOcena(filmovi)}`);
+
+/*Napraviti funkciju najboljeOcenjeni kojoj se prosleđuje niz filmova, a ona vraća najbolje ocenjeni film. */
+
+let najboljeOcenjeni = niz => {
+    let naj = niz[0]; // u naj cuvamo ceo objekat, da bi mogli da vratimo naj
+
+    niz.forEach(film => {
+        let p = film.prosecna();
+        if(p > naj.prosecna()) {
+            naj = film;
+        }
+    });
+    return naj;
+};
+
+console.log(`Najbolje ocenjeni film je: `);
+najboljeOcenjeni(filmovi).stampaj();

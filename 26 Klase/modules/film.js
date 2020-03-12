@@ -8,10 +8,11 @@ Kreirati tri objekta klase Film.
 Testirati metode klase. */
 
 export default class Film {
-    constructor (n, r, gi) {
+    constructor (n, r, gi, o) {
         this.fNaslov = n;
         this.fReziser = r;
         this.fGodinaIzdanja = gi;
+        this.fOcene = o;
     }
     stampaj () {
         let naslovFilma = this.naslov
@@ -41,4 +42,23 @@ export default class Film {
             this.godinaIzdanja = gi;
         }
     }
+    get fOcene() {
+        return this.ocene;
+    }
+    set fOcene(o) {
+        this.ocene = o;
+    }
+    prosecna() {
+        let s = 0;
+        let br = this.ocene.length;
+        let niz = this.ocene;
+        niz.forEach(elem => {
+            s += elem;
+        });
+        let arsr = s / br;
+        return arsr;
+    }
 }
+
+//U klasi Film dodati polje ocene koje čini niz ocena koje su korisnici dali filmu
+//Napraviti metod prosek koji vraća prosečnu ocenu
