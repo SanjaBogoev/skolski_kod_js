@@ -1,0 +1,6 @@
+1. Kreirali smo osnovni dizajn stranice (osnovni HTML i CSS stranice)
+2. Konekcija sa Firestore bazom podataka
+3. Kreiranje chat.js fajla i ukljucen u .html dokument
+    - Kreirali smo klasu Chatroom sa konstruktorom, geterima i seterima za username, room i chats
+    - Kreiranje asinhrone funkcije addChat kojoj prosledjujemo poruku koju zelimo da upisemo u novokreirani dokument
+    - Kreiramo metod getChats koji ima ulogu u toma da "osluskuje" promenekoje se dese u bazi i kada se nesto doda kolekciji 'chats' da okine dunkciju koja ce ispisati podatke o promeni 

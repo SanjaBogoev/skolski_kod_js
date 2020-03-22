@@ -192,3 +192,56 @@ let najboljeOcenjeni = niz => {
 
 console.log(`Najbolje ocenjeni film je: `);
 najboljeOcenjeni(filmovi).stampaj();
+
+/*Napraviti funkciju osrednjiFilm kojoj se prosleđuje niz filmova a ona vraća film
+koji je najbliži prosečnoj oceni svih filmova. */
+
+let osrednjiFilm = niz => {
+    let globalniProsek = prosecnaOcena(niz);
+    //gp = 6.2
+    //f1 = 4.5
+    //f2 = 7
+    let najbliziElem = niz[0];
+    let najbliziProsek = Math.abs(niz[0].prosecna() - globalniProsek);
+
+    niz.forEach(elem => {
+        let pom = Math.abs(elem.prosecna() - globalniProsek);
+        if(pom < najbliziProsek) {
+            najbliziElem = elem;
+            najbliziProsek = pom;
+        }
+    });
+    return najbliziElem;
+};
+
+let osr = osrednjiFilm(filmovi);
+console.log("**********");
+osr.stampaj();
+
+/*Napisati funkciju najcescaOcena kojoj se prosleđuje niz ocena, a ona vraća
+ocenu koju su filmovi najčešće dobijali. */
+
+let oc = [1, 5, 7, 8.3, 4.001, 10, 1, 9, 9, 5, 5, 5];
+
+let najcesca = oc[0];
+let ponavljanje = 0;
+let maxPonavljanja = 0;
+
+/*for (let i = 0; i < oc.length; i++) {
+    for(let j = 0; j < oc.length; i++) {
+        if(oc[i] == oc[j]) {
+            ponavljanje++;
+        }
+    }
+    if(ponavljanje > maxPonavljanja) {
+        maxPonavljanja = ponavljanje;
+        najcesca = oc[i];
+    }
+    ponavljanje = 0;
+}
+*/
+console.log(`Najfrekventnija ocena je: ${najcesca}`);
+
+/*Napisati funkciju iznadOceneNoviji kojoj se prosleđuje ocena i niz filmova
+a koja treba da na ekranu da ispiše sve podatke o najnovijem filmu koji
+zadovoljava prosleđenu ocenu */
